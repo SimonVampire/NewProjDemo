@@ -29,10 +29,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.activity.login.LoginActivity"
             android:label="@string/title_activity_login">
         </activity>
         <activity android:name=".view.activity.net.NetActivity">
+        </activity>
+        <activity android:name=".view.activity.net.ImageActivity">
         </activity>
     </application>
 

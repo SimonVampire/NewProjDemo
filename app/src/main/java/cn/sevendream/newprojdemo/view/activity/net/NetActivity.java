@@ -1,6 +1,7 @@
 package cn.sevendream.newprojdemo.view.activity.net;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
 	private Toast toast;
 	private Button postBtn;
 	private Button getBtn;
+	private Button imageBtn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,10 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
 		toast = new Toast(context);
 		postBtn = (Button) findViewById(R.id.postBtn);
 		getBtn = (Button) findViewById(R.id.getBtn);
+		imageBtn = (Button) findViewById(R.id.imageBtn);
 		postBtn.setOnClickListener(this);
 		getBtn.setOnClickListener(this);
+		imageBtn.setOnClickListener(this);
 
 	}
 
@@ -48,6 +52,10 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
 				break;
 			case R.id.getBtn:
 				testGetRequest();
+				break;
+			case R.id.imageBtn:
+				Intent intent = new Intent(context, ImageActivity.class);
+				startActivity(intent);
 				break;
 			default:
 				break;
